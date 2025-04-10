@@ -8,6 +8,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -38,7 +39,12 @@ public class AgendaContatosResource {
     @ResponseStatus(HttpStatus.CREATED)
     public ContatoResponse cadastrar(@RequestBody ContatoResponse contatoResponse) {
         var contato = toContato(contatoResponse);
-        var contatoCadastrado = agendaContatosUseCase.cadastrar(contato);
+        Contato contatoCadastrado;
+        try {
+            contatoCadastrado = agendaContatosUseCase.cadastrar(contato);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "O sistema apresentou falha. Contate o administrador", e);
+        }
         return toContatoResponse(contatoCadastrado);
     }
 
