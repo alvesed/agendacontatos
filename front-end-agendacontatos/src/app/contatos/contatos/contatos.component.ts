@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { Contato } from '../model/contato';
 import { ContatosService } from '../services/contatos.service';
 import { Observable, of } from 'rxjs';
@@ -16,7 +18,7 @@ export interface PeriodicElement {
   selector: 'table-basic-example',
   templateUrl: './contatos.component.html',
   styleUrl: './contatos.component.css',
-  imports: [MatTableModule],
+  imports: [MatTableModule, MatButtonModule, MatIconModule],
 })
 
 
@@ -45,9 +47,9 @@ export class ContatosComponent implements OnInit{
     console.log("Consultar contato...");
     this.router.navigate(['/contatos/new']);
   }
-  onEditar() {
-    console.log("Editar contato...");
-    this.router.navigate(['/contatos/new']);
+  onEditar(contato: Contato) {
+    console.log("Editar contato:" + contato);
+    this.router.navigate(['/contatos/edit/:_id', contato._id]);
   }
   onInativar() {
     console.log("Inativar contato...");

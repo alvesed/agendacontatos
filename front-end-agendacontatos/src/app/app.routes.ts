@@ -6,4 +6,5 @@ export const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'contatos' },
     {path: 'contatos', component: ContatosComponent},
     {path: 'contatos/new', component: ContatoFormComponent},
+    {path: 'contatos/edit/:_id', component: ContatoFormComponent},
 ];
