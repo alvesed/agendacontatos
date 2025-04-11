@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "b29b3eb5-b4b6-4b7d-a96c-dc9f3a453140",
+		"name": "Agenda de contatos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12880806"
+	},
+	"item": [
+		{
+			"name": "Listar contatos",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar contato",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/agendacontatos/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"agendacontatos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Estacionamento Bruno\",\r\n    \"active\": true,\r\n    \"featured_type\": \"BANNER\",\r\n    \"cep\": \"86020380\",\r\n    \"endereco\": \"Rua Abcd\",\r\n    \"numero\": \"123\",\r\n    \"complemento\": \"Casa\",\r\n    \"bairro\": \"Terra Bonita\",\r\n    \"cidade\": \"Londrina\",\r\n    \"estado\": \"Paraná\",\r\n    \"latitude\": \"-23.312131589292473\",\r\n    \"longitude\": \"-51.162094719692114\",\r\n    \"cover\": \"capa01.png\",\r\n    \"logo\": \"logo02.png\",\r\n    \"phone_number\": \"(43) 99991-9991\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Estacionamento Bruno atualizado\",\r\n    \"active\": true,\r\n    \"featured_type\": \"BANNER\",\r\n    \"cep\": \"86020380\",\r\n    \"endereco\": \"Rua Abcd\",\r\n    \"numero\": \"123\",\r\n    \"complemento\": \"Casa\",\r\n    \"bairro\": \"Terra Bonita\",\r\n    \"cidade\": \"Londrina\",\r\n    \"estado\": \"Paraná\",\r\n    \"latitude\": \"-23.312131589292473\",\r\n    \"longitude\": \"-51.162094719692114\",\r\n    \"cover\": \"capa01.png\",\r\n    \"logo\": \"logo02.png\",\r\n    \"phone_number\": \"(43) 99992-9992\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/parking/34",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inativar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking/28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking",
+						"28"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
