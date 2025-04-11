@@ -1,57 +1,59 @@
-# Desafio Técnico Front-end
+# FrontEndAgendacontatos
 
-## Introdução
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
 
-O objetivo deste desafio é avaliar sua abordagem para resolver um problema utilizando recursos comuns dos sistemas da Maptriz. Fornecemos um esqueleto de projeto em Angular como ponto de partida, mas você pode optar por outras tecnologias de front-end, se preferir.
+## Development server
 
-Ao concluir, hospede o projeto no seu GitHub (evite referências diretas à Maptriz). Realizaremos um *Code Review* e uma conversa técnica posteriormente. Se optar por usar a base em Angular, faça um *fork* do projeto no seu GitHub.
+To start a local development server, run:
 
-Envie o link do seu GitHub para processoseletivo@maptriz.com.br.
-
-## Descrição do Desafio
-
-Desenvolva uma agenda com gerenciamento de contatos, com as seguintes funcionalidades:
-
-* Cadastro de pessoas físicas como contatos.
-* Consulta de contatos.
-* Edição de contatos.
-* Exclusão de contatos.
-* Envio de notificações via e-mail para o usuário após alterações na agenda.
-
-Funcionalidades opcionais:
-
-* Cadastro de pessoas jurídicas como contatos.
-* Armazenamento de coordenadas de moradia (pessoa física) ou escritório (pessoa jurídica).
-* Adição de recursos de acessibilidade (foco em deficiências visuais).
-* Tradução da interface para pelo menos um idioma adicional.
-
-Itens não avaliados:
-
-* Design da interface.
-* Autenticação do usuário.
-
-A aplicação deve ser executável localmente e ter tratamento de erros adequado, incluindo feedback ao usuário e evitando falhas graves. Atente-se às comunicações com APIs e formulários.
-
-## Técnicas Desejadas
-
-Se utilizar Angular, use as seguintes técnicas:
-
-* Angular Reactive Forms (https://angular.io/guide/reactive-forms) em todos os formulários.
-* NGXS (https://www.ngxs.io/) para gerenciamento de estados.
-
-Utilize técnicas análogas se escolher outra tecnologia de front-end.
-
-## Como Executar o Projeto Angular
-
-Para rodar o projeto Angular (caso opte por esta tecnologia), instale o NodeJS (recomendamos versão 14, por exemplo, 14.15). Execute:
-
-```
-npm install -g angular-cli
-```
-
-Depois, na pasta raiz do projeto:
-
-```
-npm install
+```bash
 ng serve
 ```
+
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
