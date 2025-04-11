@@ -1,1 +1,18 @@
-<p>contato-form works!</p>
+<p>Cadastro de contato</p>
+<form [formGroup]="form">
+    <mat-form-field>
+        <input matInput placeholder="Nome" formControlName="nome" #nome />
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Cpf" formControlName="cpf" #cpf />
+    </mat-form-field>
+
+
+    <button mat-raised-button color="primary" (click)="onSubmit()">
+        Salvar
+    </button>
+    <button mat-raised-button (click)="onCancel()" class="btn-space">
+        Cancelar
+    </button>
+</form>

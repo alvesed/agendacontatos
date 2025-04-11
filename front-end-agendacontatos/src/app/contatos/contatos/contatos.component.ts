@@ -3,6 +3,7 @@ import {MatTableModule} from '@angular/material/table';
 import { Contato } from '../model/contato';
 import { ContatosService } from '../services/contatos.service';
 import { Observable, of } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 export interface PeriodicElement {
   name: string;
@@ -24,7 +25,10 @@ export class ContatosComponent implements OnInit{
 
   //contatoService: ContatosService;
   
-  constructor(private contatoService: ContatosService) {
+  constructor(
+    private contatoService: ContatosService,
+    private router: Router
+  ) {
     //this.contatoService = new ContatosService();
 
     this.contatos = this.contatoService.list();
@@ -35,15 +39,19 @@ export class ContatosComponent implements OnInit{
 
   onAdicionar() {
     console.log("Adicionando contato...");
+    this.router.navigate(['/contatos/new']);
   }
   onConsultar() {
     console.log("Consultar contato...");
+    this.router.navigate(['/contatos/new']);
   }
   onEditar() {
     console.log("Editar contato...");
+    this.router.navigate(['/contatos/new']);
   }
   onInativar() {
     console.log("Inativar contato...");
+    this.router.navigate(['/contatos/new']);
   }
 
 

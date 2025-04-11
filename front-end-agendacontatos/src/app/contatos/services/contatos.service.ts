@@ -18,4 +18,13 @@ export class ContatosService {
         tap((contatos: Contato[]) => console.log('Contatos:', contatos)),
       );
   }
+
+  save(contato: Contato) {
+    return this.httpClient.post<Contato>(this.API_URL, contato)
+      .pipe(
+        first(),
+        tap((contato: Contato) => console.log('Contato salvo:', contato)),
+      );
+  }
+
 }
